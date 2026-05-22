@@ -30,7 +30,7 @@ Telemetria do syslog evidenciando a tentativa de enumeração de contas inexiste
 <img width="840" height="160" alt="ssh 2" src="https://github.com/user-attachments/assets/22c438c6-8221-405b-a18c-61e05d4f1e5f" />
 
 
-Registro forense da fase de contenção. A linha inicial demonstra a auditoria do comando executado via `sudo` pelo operador (`systemctl stop ssh`), seguida pelas mensagens subsequentes do kernel e do `systemd` processando o encerramento seguro do daemon do OpenSSH via Signal 15.*![Uploading ssh 2.png…]()
+Registro forense da fase de contenção. A linha inicial demonstra a auditoria do comando executado via `sudo` pelo operador (`systemctl stop ssh`), seguida pelas mensagens subsequentes do kernel e do `systemd` processando o encerramento seguro do daemon do OpenSSH via Signal 15.
 
 
 
@@ -42,10 +42,12 @@ Os destaques em vermelho evidenciam o padrão clássico de um ataque automatizad
 
 ## Handshake TCP
 <img width="875" height="142" alt="ack syn" src="https://github.com/user-attachments/assets/2307dd8d-314c-49d3-82d9-550f5209f10b" />
+
 Tráfego filtrado por ‘tcp.flags.syn ==1 && tcp.flags.ack==’. Os destaques em vermelho evidenciam o comportamento agressivo do Hydra, que inicia múltiplas conexões em paralelo utilizando portas de origem dinâmicas e sequenciais em intervalos de frações de milisegundos direcionadas á porta 22. 
 
 ## Banner Grabbing
 <img width="821" height="496" alt="tcp stream ssh" src="https://github.com/user-attachments/assets/18c03367-55eb-4faa-aa7c-05d2735a6007" />
+
 Análise do fluxo de dados (Follow TCP Stream) de uma das tentativas de conexão.Os destaques em vermelho evidenciam a fase de “Banner Grabbing”, onde é possível visualizar em texto claro a identificação da ferramenta atacante (libssh) e a resposta do servidor informando sua versão exata do serviço (OpenSSH 10.3p1 Debian). 
 
 ## Portas Dinâmicas
