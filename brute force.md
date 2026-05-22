@@ -18,7 +18,23 @@ Preparação e execução do ataque por dicionário. Criação das wordlists de 
 
 <img width="839" height="180" alt="image" src="https://github.com/user-attachments/assets/07bcf102-125a-4e59-ac1b-bac7a2bd03ad" />
 A execução bem –sucedida do ataque de dicionário com Hydra. O sublinhado aponta a identificação exata das credenciais válidas (login:kali/password:kali)para o serviço SSH local em apenas 4 segundos. 
+
+
 ## Evidências e Análise
+## Telemetria de Autenticação em /var/log/auth.log
+<img width="853" height="145" alt="logs linux" src="https://github.com/user-attachments/assets/d6e2f51b-e1bb-416e-8bae-1824a5b1e3b6" />
+Telemetria do syslog evidenciando a tentativa de enumeração de contas inexistentes (`admin` e `suporte`). O módulo `pam_unix` acusa imediatamente o gatilho `user unknown`, confirmando que o atacante está mapeando a superfície de autenticação às 18:44:37.*
+
+## Resposta a Incidentes e Contenção do Vetor de Ataque
+
+<img width="840" height="160" alt="ssh 2" src="https://github.com/user-attachments/assets/22c438c6-8221-405b-a18c-61e05d4f1e5f" />
+
+
+Registro forense da fase de contenção. A linha inicial demonstra a auditoria do comando executado via `sudo` pelo operador (`systemctl stop ssh`), seguida pelas mensagens subsequentes do kernel e do `systemd` processando o encerramento seguro do daemon do OpenSSH via Signal 15.*![Uploading ssh 2.png…]()
+
+
+
+
 ## Filtro SSH
 <img width="1256" height="139" alt="filtro ssh" src="https://github.com/user-attachments/assets/49dfc406-2a95-4836-a66a-6aab7d6c5da8" />
 
