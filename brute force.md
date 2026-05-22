@@ -7,7 +7,7 @@
 - Comunicação TCP direcionada à porta 22
 
 ## Simulação
-<img width="284" height="72" alt="image" src="https://github.com/user-attachments/assets/f56d9dbd-185b-4e5d-bbb9-227f7fa176af" />
+<img width="204" height="52" alt="image" src="https://github.com/user-attachments/assets/f56d9dbd-185b-4e5d-bbb9-227f7fa176af" />
 
 
 Inicialização do serviço SSH na máquina local para simulação do vetor de ataque e recepção de conexões.
