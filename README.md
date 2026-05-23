@@ -29,3 +29,4 @@ O relatório completo contendo a análise de pacotes, filtros utilizados e ident
 
 [Acesse o Relatório de Análise de Brute Force](SSH-Brute-Force-Detection.md).
 
+[Clique aqui para baixar o arquivo de captura original (PCAPNG)](brute-force-ssh-traffic.pcapng)**
