@@ -7,12 +7,12 @@
 - Comunicação TCP direcionada à porta 22
 
 ## Simulação
-<img width="204" height="52" alt="image" src="https://github.com/user-attachments/assets/f56d9dbd-185b-4e5d-bbb9-227f7fa176af" />
+<img width="160" height="42" alt="image" src="https://github.com/user-attachments/assets/f56d9dbd-185b-4e5d-bbb9-227f7fa176af" />
 
 
 Inicialização do serviço SSH na máquina local para simulação do vetor de ataque e recepção de conexões.
 
-<img width="492" height="157" alt="image" src="https://github.com/user-attachments/assets/a700f3c9-351d-4ebe-9550-83b3f2ddb3bb" />
+<img width="300" height="90" alt="image" src="https://github.com/user-attachments/assets/a700f3c9-351d-4ebe-9550-83b3f2ddb3bb" />
 
 Preparação e execução do ataque por dicionário. Criação das wordlists de usuários (usuarios.txt) e senhas (senhas.txt) utilizando quebras de linha (\n), seguida pelo disparo da ferramenta Hydra contra o serviço SSH local (127.0.0.1).
 
