@@ -21,3 +21,5 @@ O objetivo do projeto foi identificar padrões característicos de autenticaçã
 - SSH
 - Linux Terminal
 
+## Obejtivo
+O objetivo central desta investigação é analisar e caracterizar os padrões heurísticos e comportamentais de um ataque de Brute Force no Wireshark
