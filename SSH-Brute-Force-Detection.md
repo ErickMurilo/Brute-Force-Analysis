@@ -85,5 +85,11 @@ Painel de dump hexadecimal e tradução em caracteres ASCII. O bloco selecionado
 - Restrição de acesso SSH
 - IDS/IPS para brute force
 
+## Conclusão
 
+O laboratório demonstrou como ataques automatizados de brute force SSH podem ser identificados através da análise de tráfego TCP, logs Linux e padrões de autenticação suspeitos.
+
+Foi possível observar comportamento típico de automação utilizando Hydra, incluindo múltiplas conexões SYN, tentativas sequenciais de login, identificação da assinatura `libssh` e comunicação direcionada ao serviço SSH.
+
+A análise reforça a importância do monitoramento de tráfego, correlação de eventos e implementação de mecanismos defensivos para mitigação de ataques de força bruta.
 
