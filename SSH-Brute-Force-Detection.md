@@ -7,12 +7,12 @@
 - Comunicação TCP direcionada à porta 22
 
 ## Simulação
-<img width="160" height="42" alt="image" src="https://github.com/user-attachments/assets/f56d9dbd-185b-4e5d-bbb9-227f7fa176af" />
+<img width="180" height="62" alt="image" src="https://github.com/user-attachments/assets/f56d9dbd-185b-4e5d-bbb9-227f7fa176af" />
 
 
 Inicialização do serviço SSH na máquina local para simulação do vetor de ataque e recepção de conexões.
 
-<img width="300" height="90" alt="image" src="https://github.com/user-attachments/assets/a700f3c9-351d-4ebe-9550-83b3f2ddb3bb" />
+<img width="330" height="120" alt="image" src="https://github.com/user-attachments/assets/a700f3c9-351d-4ebe-9550-83b3f2ddb3bb" />
 
 Preparação e execução do ataque por dicionário. Criação das wordlists de usuários (usuarios.txt) e senhas (senhas.txt) utilizando quebras de linha (\n), seguida pelo disparo da ferramenta Hydra contra o serviço SSH local (127.0.0.1).
 
@@ -38,12 +38,12 @@ Registro forense da fase de contenção. A linha inicial demonstra a auditoria d
 
 
 ## Filtro SSH
-<img width="550" height="109" alt="filtro ssh" src="https://github.com/user-attachments/assets/49dfc406-2a95-4836-a66a-6aab7d6c5da8" />
+<img width="650" height="120" alt="filtro ssh" src="https://github.com/user-attachments/assets/49dfc406-2a95-4836-a66a-6aab7d6c5da8" />
 
 Os destaques em vermelho evidenciam o padrão clássico de um ataque automatizado de força bruta (brute force): requisições sequenciais enviadas em intervalos de milisegundos e a assinatura da biblioteca libssh utilizada pela ferramenta Hydra para realizar o disparo de tentativas. 
 
 ## Handshake TCP
-<img width="550" height="109" alt="ack syn" src="https://github.com/user-attachments/assets/2307dd8d-314c-49d3-82d9-550f5209f10b" />
+<img width="450" height="109" alt="ack syn" src="https://github.com/user-attachments/assets/2307dd8d-314c-49d3-82d9-550f5209f10b" />
 
 Tráfego filtrado por ‘tcp.flags.syn ==1 && tcp.flags.ack==’. Os destaques em vermelho evidenciam o comportamento agressivo do Hydra, que inicia múltiplas conexões em paralelo utilizando portas de origem dinâmicas e sequenciais em intervalos de frações de milisegundos direcionadas á porta 22. 
 
